@@ -110,46 +110,42 @@
         <h1 align="center" class="post_header">Post Property</h1>
         <div class="recent_post">
           <div class="post">
-            <form class="row g-3">
+            <form id="property_form" class="row g-3">
               <div class="col-md-6">
                 <label for="propertyName" class="form-label">Property Name</label>
-                <input type="text" class="form-control" id="propertyName">
+                <input type="text" class="form-control" name="propertyName">
               </div>
               <div class="col-md-6">
                 <label for="type" class="form-label">Type</label>
-                <input type="text" class="form-control" id="type">
+                <input type="text" class="form-control" name="type">
               </div>
               <div class="col-12">
                 <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <input type="text" class="form-control" name="inputAddress" placeholder="1234 Main St">
               </div>
               <div class="col-md-6">
                 <label for="bedroom" class="form-label">Number of Bed Rooms</label>
-                <input type="text" class="form-control" id="bedroom">
+                <input type="text" class="form-control" name="bedroom">
               </div>
               <div class="col-md-6">
                 <label for="bath_room" class="form-label">Number Of Bath Rooms</label>
-                <input type="text" class="form-control" id="bath_room">
+                <input type="text" class="form-control" name="bath_room">
               </div>
               <div class="col-md-6">
                 <label for="image" class="form-label">Image</label>
-                <input type="file" class="form-control" id="image">
-              </div>
-              <div class="col-md-6 row-cols-lg-20">
-                <label for="type" class="form-label">Post Date</label>
-                <input type="date" class="form-control" id="type">
+                <input type="file" class="form-control" name="image">
               </div>
               <div class="col-md-6">
                 <label for="cost" class="form-label">Cost</strong></label>
-                <input type="text"  pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="cost" data-type="currency" class="form-control" id="cost" placeholder="$1,000,000.00">
+                <input type="text"  name="price" data-type="currency" class="form-control" id="cost" placeholder="$1,000,000.00">
               </div>
               <div class="col-md-2">
                 <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" name="inputCity">
               </div>
               <div class="col-4">
                 <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
+                <select name="inputState" class="form-select">
                   <option >Mukono</option>
                   <option>Masaka</option>
                   <option>Kampala</option>
@@ -166,7 +162,7 @@
               </div>
             </form>
             <div class="recent_buttons">
-              <button type="submit" class="btn btn-primary">Submit for review</button>
+              <button form="property_form" type="submit" class="btn btn-primary">Submit for review</button>
             </div>
           </div>
         </div>
@@ -312,6 +308,6 @@
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
